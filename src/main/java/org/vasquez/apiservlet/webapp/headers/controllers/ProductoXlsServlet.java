@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet({"/productos.xls","/productos.html"})
+@WebServlet({"/productos.xls","/productos.html","/productos"})
 public class ProductoXlsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,6 +38,7 @@ public class ProductoXlsServlet extends HttpServlet {
                 out.println("     <body>");
                 out.println("         <h1>Listado de Productos!</h1>");
                 out.println("         <p><a href=\"" + req.getContextPath() + "/productos.xls" + "\">Exportar a excel</a></p>");
+                out.println("         <p><a href=\"" + req.getContextPath() + "/productos.json" + "\">Mostrar json</a></p>");
             }
             out.println("           <table>");
             out.println("               <tr>");
